@@ -1,0 +1,67 @@
+/* mulish-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/mulish-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* oswald-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/oswald-v57-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+body{
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 90em;
+  overflow-x: hidden;
+}
+
+/*Start Header*/
+
+.header{
+  background-color: black;
+}
+.header-block{
+  width: 98%;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+}
+.header-logo{
+  padding: 0rem 1.25rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
+}
+.nav-list_item{
+  font: 400 16px/150% 'Oswald';
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+/*End Header*/
