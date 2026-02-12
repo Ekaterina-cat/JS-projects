@@ -15,15 +15,17 @@
   src: url('../fonts/oswald-v57-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-html{
+html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-body{
+body {
   margin: 0 auto;
   flex-wrap: wrap;
   width: 90em;
@@ -32,18 +34,18 @@ body{
 
 /*Start Header*/
 
-.header{
-  background-color: black;
+.header {
+  background-color: #222;
 }
-.header-block{
+.header-block {
   width: 98%;
   height: 3.75rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: black;
+  background-color: #222;
 }
-.header-logo{
+.header-logo {
   padding: 0rem 1.25rem;
   width: 3.75rem;
   height: 3.75rem;
@@ -51,13 +53,13 @@ body{
   flex-direction: column;
   justify-content: center;
 }
-.nav-list{
+.nav-list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   list-style-type: none;
 }
-.nav-list_item{
+.nav-list_item {
   font: 400 16px/150% 'Oswald';
   text-transform: uppercase;
   text-align: center;
@@ -65,3 +67,133 @@ body{
 }
 
 /*End Header*/
+
+/*Start Main*/
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*Start Hero*/
+
+.hero {
+  width: 100%;
+  height: 53.875rem;
+  background: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hero-left-block {
+  padding: 60px 0px;
+  width: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.hero-left-block_text,
+.hero-left-block_date {
+  font: 500 0.75rem/133% 'Mulish';
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+.hero-left-block_date {
+  margin-top: 0;
+}
+.hero-left-block_line {
+  width: 1px;
+  height: 33.5rem;
+}
+.hero-right-block {
+  padding: 0rem 1.25rem;
+  width: 85rem;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.hero-right-block-first {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  padding: 160px 0px 60px;
+  width: 740px;
+  height: 862px;
+}
+.hero-right-block-first_info {
+  width: 740px;
+  height: 458px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero-right-block-first_info-count {
+  width: 341px;
+  height: 86px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+.hero-right-block-first_info-count-first,
+.hero-right-block-first_info-count-second {
+  width: 160px;
+  height: 86px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.hero-right-block-first_info-count-data-num {
+  font: 300 48px/113% 'Oswald';
+}
+.hero-right-block-first_info-count-data-text,
+.hero-right-block-first_btn-scroll-text,
+.hero-right-block-third-text {
+  font: 400 16px/150% 'Mulish';
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-right-block-first_info-title,
+.hero-right-block-first_info-text,
+.hero-right-block-first_info-count-data-num {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-right-block-first_info-title {
+  font: 300 116px/114% 'Oswald';
+}
+.hero-right-block-first_info-text {
+  font: 400 20px/140% 'Oswald';
+}
+.hero-right-block-first_btn-scroll {
+  width: 119px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.hero-right-block-second {
+  padding: 60px 0px;
+  width: 220px;
+  height: 862px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-right-block-third {
+  padding: 60px 0px;
+  width: 280px;
+  height: 862px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-right-block-third-text {
+  width: 220px;
+  text-align: right;
+  align-self: flex-end;
+}
+
+/*End Hero*/
+
+/*End Main*/
