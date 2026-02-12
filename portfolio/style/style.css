@@ -196,4 +196,61 @@ body {
 
 /*End Hero*/
 
+/*Start About*/
+
+.about {
+  padding: 60px 20px;
+  width: 1440px;
+  height: 748px;
+  background: #fff;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-block-first,
+.about-block-second,
+.about-block-third{
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-block-first{
+  height: 628px;
+  gap: 40px;
+}
+.about-block-first-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.about-block-first-info_title{
+  font: 400 32px/125% 'Oswald';
+  text-transform: uppercase;
+}
+.about-block-first-info_text,
+.about-block-second-text,
+.about-block-third-text{
+  font: 400 16px/150% 'Mulish';
+}
+.about-block-first-info_title,
+.about-block-first-info_text,
+.about-block-second-text,
+.about-block-third-text{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.about-block-second{
+  height: 576px;
+}
+
+.about-block-third{
+  height: 504px;
+  gap: 40px;
+}
+
+/*End About*/
+
 /*End Main*/
