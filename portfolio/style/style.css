@@ -328,4 +328,78 @@ body {
 
 /*End Portfolio*/
 
+/*Start Price*/
+
+.price {
+  padding: 60px 20px;
+  height: 736px;
+  background: #fff;
+  color: #222;
+}
+.price-title-block {
+  height: 76px;
+  margin-bottom: 40px;
+}
+.price-title-block-name,
+.price-title-block-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.price-title-block-name {
+  font: 400 32px/125% 'Oswald';
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.price-title-block-text,
+.price-container_card-list {
+  font: 400 16px/150% 'Mulish';
+}
+.price-container {
+  width: 1400px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+}
+.price-container_card {
+  border: 1px solid #222;
+  padding: 24px;
+  width: 320px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price-container_card-title {
+  font: 400 20px/140% 'Oswald';
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.price-container_card-list {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.price-container_card-cost,
+.price-card-btn {
+  font: 400 16px/150% 'Oswald';
+  text-transform: uppercase;
+}
+.price-container_card-cost::before {
+  content: "€";
+}
+.price-container_card-btn-text {
+  font: italic 400 16px/125% 'Mulish';
+}
+.price-card-btn {
+  padding: 0px 20px;
+  width: 272px;
+  height: 60px;
+  min-width: 200px;
+  background: #222;
+  color: #fff;
+}
+/*End Price*/
+
 /*End Main*/
