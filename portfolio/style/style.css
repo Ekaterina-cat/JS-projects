@@ -210,47 +210,122 @@ body {
 }
 .about-block-first,
 .about-block-second,
-.about-block-third{
+.about-block-third {
   width: 440px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.about-block-first{
+.about-block-first {
   height: 628px;
   gap: 40px;
 }
-.about-block-first-info{
+.about-block-first-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
 }
-.about-block-first-info_title{
+.about-block-first-info_title {
   font: 400 32px/125% 'Oswald';
   text-transform: uppercase;
 }
 .about-block-first-info_text,
 .about-block-second-text,
-.about-block-third-text{
+.about-block-third-text {
   font: 400 16px/150% 'Mulish';
 }
 .about-block-first-info_title,
 .about-block-first-info_text,
 .about-block-second-text,
-.about-block-third-text{
+.about-block-third-text {
   margin-top: 0;
   margin-bottom: 0;
 }
-.about-block-second{
+.about-block-second {
   height: 576px;
 }
 
-.about-block-third{
+.about-block-third {
   height: 504px;
   gap: 40px;
 }
 
 /*End About*/
+
+/*Start Portofolio*/
+
+.portfolio {
+  padding: 60px 20px;
+  height: 914px;
+  background: #222;
+  color: #fff;
+}
+.portfolio-block {
+  height: 794px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.portfolio-block-info {
+  width: 360px;
+  height: 100px;
+  max-width: 360px;
+}
+.portfolio-block-info-title,
+.portfolio-block-info-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.portfolio-block-info-title {
+  font: 400 32px/125% 'Oswald';
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.portfolio-block-info-text {
+  font: 400 16px/150% 'Mulish';
+  color: #fff;
+}
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 654px;
+  gap: 20px;
+  padding: 0px 20px;
+}
+.slider :nth-child(-n + 12) {
+  display: flex;
+}
+.slider :nth-child(1),
+.slider :nth-child(8) {
+  width: 400px;
+  align-items: flex-end;
+}
+.slider :nth-child(2),
+.slider :nth-child(9) {
+  width: 220px;
+  align-items: center;
+}
+.slider :nth-child(3),
+.slider :nth-child(5),
+.slider :nth-child(11) {
+  width: 280px;
+  align-items: center;
+}
+.slider :nth-child(4),
+.slider :nth-child(12) {
+  width: 400px;
+}
+.slider :nth-child(6) {
+  width: 220px;
+  align-items: center;
+}
+.slider :nth-child(7),
+.slider :nth-child(10) {
+  width: 280px;
+}
+
+/*End Portfolio*/
 
 /*End Main*/
