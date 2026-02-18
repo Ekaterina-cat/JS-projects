@@ -1,0 +1,42 @@
+@media screen and (max-width: 1420px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .hero-right-block {
+    gap: 20px;
+  }
+  .hero-right-block-second {
+    display: none;
+  }
+}
+@media screen and (max-width: 980px) {
+  .about-block-third img {
+    display: none;
+  }
+  .about-block-first img,
+  .about-block-second img {
+    width: 100%;
+  }
+  .about-block-first,
+  .about-block-second,
+  .about-block-third {
+    width: 728px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .header-burger {
+    display: flex;
+  }
+  .hero-right-block-first_info-title {
+    font: 300 68px/118% 'Oswald';
+    width: 408px;
+  }
+  .hero-right-block-third {
+    width: 220px;
+  }
+}
