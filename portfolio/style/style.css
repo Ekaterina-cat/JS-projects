@@ -351,7 +351,6 @@ body {
 
 .price {
   padding: 60px 20px;
-  height: 736px;
   background: #fff;
   color: #222;
 }
@@ -374,10 +373,10 @@ body {
   font: 400 16px/150% 'Mulish';
 }
 .price-container {
-  height: 500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .price-container_card {
@@ -389,6 +388,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.price-container_card-info {
+  display: flex;
+  flex-direction: column;
+}
 .price-container_card-title {
   font: 400 20px/140% 'Oswald';
   text-transform: uppercase;
@@ -397,7 +400,21 @@ body {
 }
 .price-container_card-list {
   list-style-type: square;
-  padding-left: 20px;
+  padding-left: 15px;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-list-mini {
+  height: 136px;
+}
+.card-list-classic {
+  height: 192px;
+}
+.card-list-story,
+.card-list-wedding {
+  height: 220px;
 }
 .price-container_card-cost,
 .price-card-btn,
@@ -405,11 +422,17 @@ body {
   font: 400 16px/150% 'Oswald';
   text-transform: uppercase;
 }
+.price-container_card-cost {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .price-container_card-cost::before {
   content: '€';
 }
 .price-container_card-btn-text {
   font: italic 400 16px/125% 'Mulish';
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 .price-card-btn,
 .footer-btn {
@@ -426,7 +449,6 @@ body {
 
 .faq {
   padding: 60px 20px;
-  height: 724px;
   background: #222;
   color: #fff;
   display: flex;
@@ -435,8 +457,7 @@ body {
 }
 .faq-block,
 .faq-accordion {
-  width: 680px;
-  height: 604px;
+  width: 50%;
 }
 .faq-title,
 .faq-text {
@@ -451,27 +472,28 @@ body {
 .faq-text {
   font: 400 16px/150% 'Mulish';
 }
-.faq-accordion-item:first-child {
-  height: 156px;
-}
 .faq-accordion-item {
-  height: 64px;
   border-bottom: 1px solid #fff;
+  height: 4rem;
+}
+.faq-accordion-item:first-child {
+  height: 9.75rem;
 }
 .faq-accordion-item_q {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0px;
 }
 .faq-accordion-item_q-text {
-  font: 400 20px/140% 'Oswald';
+  font: 400 20px/130% 'Oswald';
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
 }
 .faq-accordion-item_a {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/144% 'Mulish';
   margin-top: 0;
   margin-bottom: 0;
 }

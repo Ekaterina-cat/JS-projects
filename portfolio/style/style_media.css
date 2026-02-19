@@ -25,6 +25,15 @@
     width: 728px;
   }
 }
+@media screen and (max-width: 910px) {
+  .faq {
+    flex-direction: column;
+  }
+  .faq-block,
+  .faq-accordion {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
