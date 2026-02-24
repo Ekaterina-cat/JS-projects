@@ -325,7 +325,6 @@ body {
   align-items: center;
 }
 .slider :nth-child(3),
-.slider :nth-child(5),
 .slider :nth-child(11) {
   width: 280px;
   align-items: center;
@@ -333,6 +332,10 @@ body {
 .slider :nth-child(4),
 .slider :nth-child(12) {
   width: 400px;
+}
+.slider :nth-child(5){
+  width: 280px;
+  padding: 120px 0px 0px;
 }
 .slider :nth-child(6) {
   width: 220px;
@@ -400,9 +403,14 @@ body {
   list-style-type: square;
   padding-left: 15px;
   margin-top: 11px;
+  margin-bottom: 11px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 200px;
+}
+.price-container_card-list li {
+  text-indent: -4px;
 }
 .card-list-mini {
   height: 136px;
@@ -538,6 +546,9 @@ body {
   width: 380px;
   height: 60px;
   background: #fff;
+  font: 400 16px/150% 'Oswald';
+  text-transform: uppercase;
+  color: #989898;
 }
 .footer-btn {
   padding: 0px 20px;
@@ -554,7 +565,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 40px;
 }
 .footer-social-link {
   font: 400 16px/150% 'Oswald';
