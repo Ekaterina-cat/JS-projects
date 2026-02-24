@@ -49,3 +49,51 @@
     width: 220px;
   }
 }
+@media screen and (max-width: 750px) {
+  .hero-left-block{
+    display: none;
+  }
+  .hero-right-block{
+    width: 100%;
+  }
+  .faq-accordion-item:first-child{
+    height: 100%;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .hero-right-block{
+    flex-direction: column;
+  }
+  .hero-right-block-first{
+    padding: 60px 0px 0px;
+  }
+  .hero-right-block-first_btn-scroll{
+    display: none;
+  }
+  .hero-right-block-third{
+    align-self: flex-end;
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 615px){
+  .footer-phone{
+    flex-direction: column;
+  }
+  .footer-input,
+  .footer-btn{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero-right-block-first_info-title{
+    font: 300 56px/114% 'Oswald';
+  }
+  .price-container_card{
+    width: 100%;
+  }
+  .footer-social{
+    height: 100%;
+    flex-direction: column;
+  }
+}

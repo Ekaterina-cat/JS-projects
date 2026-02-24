@@ -85,6 +85,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: end;
+  padding-right: 24px;
   gap: 12px;
 }
 .burger-line-first {
@@ -145,12 +146,10 @@ body {
 .hero-right-block-first {
   display: flex;
   flex-direction: column;
-  gap: 160px;
-  padding: 160px 0px 60px;
-  height: 862px;
+  gap: 10rem;
+  padding: 10rem 0px 3.75rem;
 }
 .hero-right-block-first_info {
-  height: 458px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -214,7 +213,6 @@ body {
 .hero-right-block-third {
   padding: 60px 0px;
   width: 280px;
-  height: 862px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -434,8 +432,7 @@ body {
   margin-top: 0;
   margin-bottom: 12px;
 }
-.price-card-btn,
-.footer-btn {
+.price-card-btn {
   padding: 0px 20px;
   width: 272px;
   height: 60px;
@@ -518,7 +515,7 @@ body {
   background: #fff;
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .footer-link-text {
   font: 400 20px/140% 'Oswald';
@@ -529,20 +526,25 @@ body {
 }
 .footer-phone {
   padding: 0px 20px;
-  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .footer-input {
   border: 1px solid #222;
   padding: 0px 12px;
   width: 380px;
   height: 60px;
-  max-width: 380px;
   background: #fff;
+}
+.footer-btn {
+  padding: 0px 20px;
+  width: 200px;
+  height: 60px;
+  background: #222;
+  color: #fff;
 }
 .footer-social {
   padding: 20px;
