@@ -1,0 +1,48 @@
+.nav-list_item_link:hover {
+  color: #ff3c3c;
+  transition: 0.7s;
+}
+.hero-right-block-first_btn-scroll:hover {
+  color: #ff3c3c;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.hero-right-block-first_btn-scroll:hover svg path {
+  stroke: #ff3c3c;
+  transition: 0.7s;
+}
+.price-container_card:hover {
+  border-color: #ff3c3c;
+  cursor: pointer;
+}
+.price-container_card:hover .price-card-btn {
+  color: #222;
+  background: #ff3c3c;
+  cursor: pointer;
+  transition: 0.7s;
+  border: #ff3c3c;
+}
+.faq-accordion-item:hover {
+  cursor: pointer;
+}
+.faq-accordion-item:hover .faq-accordion-item_q-text {
+  color: #ff3c3c;
+}
+.faq-accordion-item:hover svg path {
+  fill: #ff3c3c;
+}
+.footer-btn:hover {
+  color: #222;
+  background: #ff3c3c;
+  border-color: #ff3c3c;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.footer-input:hover {
+  border-color: #ff3c3c;
+  transition: 0.7s;
+}
+.footer-social-link:hover {
+  color: #ff3c3c;
+  transition: 0.7s;
+}

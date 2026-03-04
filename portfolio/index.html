@@ -15,6 +15,10 @@
       href="./style/style_media.css"
     />
     <link
+      rel="stylesheet"
+      href="./style/style_hover.css"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="./images/icons/favicon.ico"
@@ -70,11 +74,21 @@
         </div>
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-list_item">about me</li>
-            <li class="nav-list_item">portfolio</li>
-            <li class="nav-list_item">price</li>
-            <li class="nav-list_item">faq</li>
-            <li class="nav-list_item">contacts</li>
+            <li class="nav-list_item">
+              <a class="nav-list_item_link" href="#about">about me</a>
+            </li>
+            <li class="nav-list_item">
+              <a class="nav-list_item_link" href="#portfolio">portfolio</a>
+            </li>
+            <li class="nav-list_item">
+              <a class="nav-list_item_link" href="#price">price</a>
+            </li>
+            <li class="nav-list_item">
+              <a class="nav-list_item_link" href="#faq">faq</a>
+            </li>
+            <li class="nav-list_item">
+              <a class="nav-list_item_link" href="#contacts">contacts</a>
+            </li>
           </ul>
         </nav>
         <div class="header-burger">
@@ -173,7 +187,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-block-first">
           <img
             src="./images/picture_3.png"
@@ -210,7 +224,7 @@
           </p>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="portfolio-block">
           <div class="portfolio-block-info">
             <h5 class="portfolio-block-info-title">my portfolio</h5>
@@ -307,7 +321,7 @@
           </div>
         </div>
       </section>
-      <section class="price">
+      <section class="price" id="price">
         <div class="price-title-block">
           <h5 class="price-title-block-name">packages & pricing</h5>
           <p class="price-title-block-text">
@@ -402,7 +416,7 @@
           </div>
         </div>
       </section>
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="faq-block">
           <h5 class="faq-title">Frequently Asked Questions</h5>
           <p class="faq-text">Everything You Wanted to Ask (and a Bit More)</p>
@@ -595,7 +609,7 @@
         />
         <button class="footer-btn">book now</button>
       </div>
-      <div class="footer-social">
+      <div class="footer-social" id="contacts">
         <a
           href="https://www.instagram.com/"
           class="footer-social-link"
