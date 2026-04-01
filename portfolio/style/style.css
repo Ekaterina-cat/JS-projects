@@ -51,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 .nav-list {
   display: flex;
@@ -91,6 +92,7 @@ body {
   align-items: end;
   padding-right: 24px;
   gap: 12px;
+  cursor: pointer;
 }
 .burger-line-first {
   width: 12px;
