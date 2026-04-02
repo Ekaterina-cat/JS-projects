@@ -1,18 +1,18 @@
 /* mulish-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Mulish';
+  font-family: "Mulish";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/mulish-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/mulish-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* oswald-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/oswald-v57-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/oswald-v57-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 html {
@@ -59,7 +59,7 @@ body {
   list-style-type: none;
 }
 .nav-list_item {
-  font: 400 16px/150% 'Oswald';
+  font: 400 16px/150% "Oswald";
   text-transform: uppercase;
   text-align: center;
 }
@@ -132,7 +132,7 @@ body {
 }
 .hero-left-block_text,
 .hero-left-block_date {
-  font: 500 0.75rem/133% 'Mulish';
+  font: 500 0.75rem/133% "Mulish";
   transform: rotate(-90deg);
   white-space: nowrap;
 }
@@ -179,7 +179,7 @@ body {
   width: 148px;
 }
 .hero-right-block-first_info-count-data-num {
-  font: 300 48px/113% 'Oswald';
+  font: 300 48px/113% "Oswald";
   margin-bottom: 8px;
   margin-top: 0;
   text-transform: uppercase;
@@ -187,7 +187,7 @@ body {
 .hero-right-block-first_info-count-data-text,
 .hero-right-block-first_btn-scroll-text,
 .hero-right-block-third-text {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/150% "Mulish";
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -198,10 +198,10 @@ body {
   margin-bottom: 0;
 }
 .hero-right-block-first_info-title {
-  font: 300 clamp(56px, 8vw, 116px) / 114% 'Oswald';
+  font: 300 clamp(56px, 8vw, 116px) / 114% "Oswald";
 }
 .hero-right-block-first_info-text {
-  font: 400 20px/140% 'Oswald';
+  font: 400 20px/140% "Oswald";
 }
 .hero-right-block-first_btn-scroll {
   height: 24px;
@@ -260,7 +260,7 @@ body {
 .about-block-first-info_text,
 .about-block-second-text,
 .about-block-third-text {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/150% "Mulish";
 }
 .about-block-first-info_text,
 .about-block-third-text {
@@ -268,7 +268,7 @@ body {
   margin-bottom: 0;
 }
 .about-block-first-info_title {
-  font: 400 32px/125% 'Oswald';
+  font: 400 32px/125% "Oswald";
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 12px;
@@ -305,18 +305,24 @@ body {
   margin-bottom: 0;
 }
 .portfolio-block-info-title {
-  font: 400 32px/125% 'Oswald';
+  font: 400 32px/125% "Oswald";
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 .portfolio-block-info-text {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/150% "Mulish";
   color: #fff;
 }
 .slider {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+  left: -20px;
+  width: 100vw;
   height: 654px;
   gap: 20px;
   padding: 0px 20px;
@@ -375,13 +381,13 @@ body {
   margin-bottom: 0;
 }
 .price-title-block-name {
-  font: 400 32px/125% 'Oswald';
+  font: 400 32px/125% "Oswald";
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 .price-title-block-text,
 .price-container_card-list {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/150% "Mulish";
 }
 .price-container {
   display: flex;
@@ -405,7 +411,7 @@ body {
   flex-direction: column;
 }
 .price-container_card-title {
-  font: 400 20px/140% 'Oswald';
+  font: 400 20px/140% "Oswald";
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -436,7 +442,7 @@ body {
 .price-container_card-cost,
 .price-card-btn,
 .footer-btn {
-  font: 400 16px/150% 'Oswald';
+  font: 400 16px/150% "Oswald";
   text-transform: uppercase;
 }
 .price-container_card-cost {
@@ -444,10 +450,10 @@ body {
   margin-bottom: 0;
 }
 .price-container_card-cost::before {
-  content: '€';
+  content: "€";
 }
 .price-container_card-btn-text {
-  font: italic 400 16px/125% 'Mulish';
+  font: italic 400 16px/125% "Mulish";
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -482,12 +488,12 @@ body {
   margin-bottom: 0;
 }
 .faq-title {
-  font: 400 32px/125% 'Oswald';
+  font: 400 32px/125% "Oswald";
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 .faq-text {
-  font: 400 16px/150% 'Mulish';
+  font: 400 16px/150% "Mulish";
 }
 .faq-accordion-item {
   border-bottom: 1px solid #fff;
@@ -504,13 +510,13 @@ body {
   padding: 20px 0px;
 }
 .faq-accordion-item_q-text {
-  font: 400 20px/130% 'Oswald';
+  font: 400 20px/130% "Oswald";
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
 }
 .faq-accordion-item_a {
-  font: 400 16px/144% 'Mulish';
+  font: 400 16px/144% "Mulish";
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -538,7 +544,7 @@ body {
   margin-bottom: 20px;
 }
 .footer-link-text {
-  font: 400 20px/140% 'Oswald';
+  font: 400 20px/140% "Oswald";
   text-transform: uppercase;
   text-align: center;
   color: #222;
@@ -558,7 +564,7 @@ body {
   width: 380px;
   height: 60px;
   background: #fff;
-  font: 400 16px/150% 'Oswald';
+  font: 400 16px/150% "Oswald";
   text-transform: uppercase;
   color: #989898;
   transition: 0.7s;
@@ -582,7 +588,7 @@ body {
   gap: 40px;
 }
 .footer-social-link {
-  font: 400 16px/150% 'Oswald';
+  font: 400 16px/150% "Oswald";
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -602,7 +608,7 @@ body {
   width: 150px;
 }
 .github-me {
-  font: 400 16px/150% 'Oswald';
+  font: 400 16px/150% "Oswald";
   text-transform: uppercase;
   text-decoration: none;
   color: #222;

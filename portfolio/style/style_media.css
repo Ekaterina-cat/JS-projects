@@ -72,7 +72,7 @@
     transform: translateY(50%) rotate(45deg);
   }
   .burger-line-second.active-burger-line {
-    transform:translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg);
   }
   .hero-right-block-first_info-title {
     font: 300 68px/118% "Oswald";
