@@ -499,8 +499,17 @@ body {
   border-bottom: 1px solid #fff;
   height: 4rem;
 }
-.faq-accordion-item:first-child {
-  height: 9.75rem;
+.faq-accordion-item {
+  height: auto;
+}
+.active-plus {
+  display: none;
+}
+.minus {
+  display: none;
+}
+.active-minus {
+  display: flex;
 }
 .faq-accordion-item_q {
   display: flex;
@@ -518,7 +527,11 @@ body {
 .faq-accordion-item_a {
   font: 400 16px/144% "Mulish";
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 15px;
+  display: none;
+}
+.active-accordion {
+  display: flex;
 }
 .faq-accordion-item_q-btn {
   color: #fff;
