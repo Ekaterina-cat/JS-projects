@@ -60,6 +60,7 @@ function clickItemAccordion() {}
 
 function clickOtherItemAccordion(answer) {
   blockFaqAnswers.forEach((otherAnswer) => {
+    const otherAnswerId = otherAnswer.getAttribute("data-id");
     if (otherAnswer !== answer) {
       const otherTextAccordion = otherAnswer.childNodes[3];
       const otherMinus = otherAnswer.childNodes[1].childNodes[3];
@@ -68,12 +69,37 @@ function clickOtherItemAccordion(answer) {
       otherTextAccordion.classList.remove("active-accordion");
       otherMinus.classList.remove("active-minus");
       otherPlus.classList.remove("active-plus");
+      localStorage.setItem(`accordion-${otherAnswerId}`, "closed");
+    }
+  });
+}
+
+function restoreAccordionState() {
+  blockFaqAnswers.forEach((answer) => {
+    const answerId = answer.getAttribute("data-id");
+    const isActiveAccordion =
+      localStorage.getItem(`accordion-${answerId}`) === "open";
+    const textAccordionCurrent = answer.childNodes[3];
+    const minusCurrent = answer.childNodes[1].childNodes[3];
+    const plusCurrent = answer.childNodes[1].childNodes[5];
+
+    firstOppenPage(`accordion-${answerId}`);
+
+    if (isActiveAccordion) {
+      textAccordionCurrent.classList.add("active-accordion");
+      minusCurrent.classList.add("active-minus");
+      plusCurrent.classList.add("active-plus");
+    } else {
+      textAccordionCurrent.classList.remove("active-accordion");
+      minusCurrent.classList.remove("active-minus");
+      plusCurrent.classList.remove("active-plus");
     }
   });
 }
 
 blockFaqAnswers.forEach((answer) => {
   answer.childNodes[1].addEventListener("click", () => {
+    const answerId = answer.getAttribute("data-id");
     const textAccordionCurrent = answer.childNodes[3];
     const minusCurrent = answer.childNodes[1].childNodes[3];
     const plusCurrent = answer.childNodes[1].childNodes[5];
@@ -92,5 +118,17 @@ blockFaqAnswers.forEach((answer) => {
     textAccordionCurrent.classList.add("active-accordion");
     minusCurrent.classList.add("active-minus");
     plusCurrent.classList.add("active-plus");
+    localStorage.setItem(`accordion-${answerId}`, "open");
   });
 });
+
+restoreAccordionState();
+
+function firstOppenPage(key) {
+  if (localStorage.getItem(key) !== null) {
+    const value = localStorage.getItem(key);
+    console.log(`Value: ${value}`);
+  } else {
+    console.log(`Key "${key}" not found.`);
+  }
+}
