@@ -70,6 +70,7 @@ function toggleAccordion(answerAccordion) {
     text.classList.remove("active-accordion");
     minus.classList.remove("active-minus");
     plus.classList.remove("active-plus");
+    localStorage.setItem(`accordion-${answerId}`, "closed");
     return;
   }
   text.classList.add("active-accordion");
@@ -108,6 +109,7 @@ function restoreAccordionState(answerAccordion) {
 }
 
 blockFaqAnswers.forEach((answerAccordion) => {
+  firstOppenPage(answerAccordion);
   restoreAccordionState(answerAccordion);
   answerAccordion.childNodes[1].addEventListener("click", () => {
     toggleAccordion(answerAccordion);
@@ -115,11 +117,14 @@ blockFaqAnswers.forEach((answerAccordion) => {
   });
 });
 
-function firstOppenPage(key) {
-  if (localStorage.getItem(key) !== null) {
-    const value = localStorage.getItem(key);
-    console.log(`Value: ${value}`);
-  } else {
-    console.log(`Key "${key}" not found.`);
+function firstOppenPage(answerAccordion) {
+  const { text, minus, plus, answerId } = getAccordionElements(answerAccordion);
+  if (
+    localStorage.getItem(`accordion-${answerId}`) === null &&
+    answerId === "1"
+  ) {
+    text.classList.add("active-accordion");
+    minus.classList.add("active-minus");
+    plus.classList.add("active-plus");
   }
 }
