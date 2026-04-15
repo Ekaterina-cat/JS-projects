@@ -7,9 +7,6 @@ const navList = document.querySelectorAll(".nav-list_item");
 const slider = document.querySelector(".slider");
 
 const blockFaqAnswers = document.querySelectorAll(".faq-accordion-item");
-const accordion = document.querySelectorAll(".faq-accordion-item_a");
-const plusFaq = document.querySelectorAll(".plus");
-const minusFaq = document.querySelectorAll(".minus");
 
 function workBurgerMenu() {
   navMenu.classList.toggle("active-nav-menu");
@@ -56,73 +53,67 @@ slider.addEventListener("mouseleave", () => {
   scrollDirection = 0;
 });
 
-function clickItemAccordion() {}
+function getAccordionElements(answerAccordion) {
+  return {
+    text: answerAccordion.childNodes[3],
+    minus: answerAccordion.childNodes[1].childNodes[3],
+    plus: answerAccordion.childNodes[1].childNodes[5],
+    answerId: answerAccordion.getAttribute("data-id"),
+  };
+}
 
-function clickOtherItemAccordion(answer) {
+function toggleAccordion(answerAccordion) {
+  const { text, minus, plus, answerId } = getAccordionElements(answerAccordion);
+  const isActive = text.classList.contains("active-accordion");
+
+  if (isActive) {
+    text.classList.remove("active-accordion");
+    minus.classList.remove("active-minus");
+    plus.classList.remove("active-plus");
+    return;
+  }
+  text.classList.add("active-accordion");
+  minus.classList.add("active-minus");
+  plus.classList.add("active-plus");
+  localStorage.setItem(`accordion-${answerId}`, "open");
+}
+
+function clickOtherItemAccordion(answerAccordion) {
   blockFaqAnswers.forEach((otherAnswer) => {
-    const otherAnswerId = otherAnswer.getAttribute("data-id");
-    if (otherAnswer !== answer) {
-      const otherTextAccordion = otherAnswer.childNodes[3];
-      const otherMinus = otherAnswer.childNodes[1].childNodes[3];
-      const otherPlus = otherAnswer.childNodes[1].childNodes[5];
+    const { text, minus, plus, answerId } = getAccordionElements(otherAnswer);
 
-      otherTextAccordion.classList.remove("active-accordion");
-      otherMinus.classList.remove("active-minus");
-      otherPlus.classList.remove("active-plus");
-      localStorage.setItem(`accordion-${otherAnswerId}`, "closed");
+    if (otherAnswer !== answerAccordion) {
+      text.classList.remove("active-accordion");
+      minus.classList.remove("active-minus");
+      plus.classList.remove("active-plus");
+      localStorage.setItem(`accordion-${answerId}`, "closed");
     }
   });
 }
 
-function restoreAccordionState() {
-  blockFaqAnswers.forEach((answer) => {
-    const answerId = answer.getAttribute("data-id");
-    const isActiveAccordion =
-      localStorage.getItem(`accordion-${answerId}`) === "open";
-    const textAccordionCurrent = answer.childNodes[3];
-    const minusCurrent = answer.childNodes[1].childNodes[3];
-    const plusCurrent = answer.childNodes[1].childNodes[5];
+function restoreAccordionState(answerAccordion) {
+  const { text, minus, plus, answerId } = getAccordionElements(answerAccordion);
+  const isActiveAccordion =
+    localStorage.getItem(`accordion-${answerId}`) === "open";
 
-    firstOppenPage(`accordion-${answerId}`);
-
-    if (isActiveAccordion) {
-      textAccordionCurrent.classList.add("active-accordion");
-      minusCurrent.classList.add("active-minus");
-      plusCurrent.classList.add("active-plus");
-    } else {
-      textAccordionCurrent.classList.remove("active-accordion");
-      minusCurrent.classList.remove("active-minus");
-      plusCurrent.classList.remove("active-plus");
-    }
-  });
+  if (isActiveAccordion) {
+    text.classList.add("active-accordion");
+    minus.classList.add("active-minus");
+    plus.classList.add("active-plus");
+  } else {
+    text.classList.remove("active-accordion");
+    minus.classList.remove("active-minus");
+    plus.classList.remove("active-plus");
+  }
 }
 
-blockFaqAnswers.forEach((answer) => {
-  answer.childNodes[1].addEventListener("click", () => {
-    const answerId = answer.getAttribute("data-id");
-    const textAccordionCurrent = answer.childNodes[3];
-    const minusCurrent = answer.childNodes[1].childNodes[3];
-    const plusCurrent = answer.childNodes[1].childNodes[5];
-    const isActive =
-      textAccordionCurrent.classList.contains("active-accordion");
-
-    if (isActive) {
-      textAccordionCurrent.classList.remove("active-accordion");
-      minusCurrent.classList.remove("active-minus");
-      plusCurrent.classList.remove("active-plus");
-      return;
-    }
-
-    clickOtherItemAccordion(answer);
-
-    textAccordionCurrent.classList.add("active-accordion");
-    minusCurrent.classList.add("active-minus");
-    plusCurrent.classList.add("active-plus");
-    localStorage.setItem(`accordion-${answerId}`, "open");
+blockFaqAnswers.forEach((answerAccordion) => {
+  restoreAccordionState(answerAccordion);
+  answerAccordion.childNodes[1].addEventListener("click", () => {
+    toggleAccordion(answerAccordion);
+    clickOtherItemAccordion(answerAccordion);
   });
 });
-
-restoreAccordionState();
 
 function firstOppenPage(key) {
   if (localStorage.getItem(key) !== null) {
