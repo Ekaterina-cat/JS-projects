@@ -3,6 +3,10 @@ const navMenu = document.querySelector(".nav");
 const burgerLineFirst = document.querySelector(".burger-line-first");
 const burgerLineSecond = document.querySelector(".burger-line-second");
 const navList = document.querySelectorAll(".nav-list_item");
+const btnBook = document.querySelectorAll(".price-card-btn");
+const modal = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".btn-close-modal");
+const btnBookModal = document.querySelector(".btn-modal-book");
 
 const slider = document.querySelector(".slider");
 
@@ -128,3 +132,28 @@ function firstOppenPage(answerAccordion) {
     plus.classList.add("active-plus");
   }
 }
+
+// Modal Window
+const isModalOpen = () => !modal.classList.contains("modal-close");
+
+const modalOpen = () => modal.classList.remove("modal-close");
+const modalClose = () => modal.classList.add("modal-close");
+
+const toggleModal = () => (isModalOpen() ? modalOpen() : modalClose());
+
+btnBook.forEach((btn) => btn.addEventListener("click", modalOpen));
+
+btnCloseModal.addEventListener("click", modalClose);
+btnBookModal.addEventListener("click", modalClose);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isModalOpen()) {
+    modalClose();
+  }
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal && isModalOpen()) {
+    modalClose();
+  }
+});

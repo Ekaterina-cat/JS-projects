@@ -632,7 +632,7 @@ body {
 /*Start Modal*/
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -641,7 +641,7 @@ body {
   background: rgba(34, 34, 34, 0.6);
 }
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -679,6 +679,9 @@ body {
   color: #fff;
   cursor: pointer;
   height: 60px;
+}
+.modal-close {
+  display: none;
 }
 
 /*End Modal*/
