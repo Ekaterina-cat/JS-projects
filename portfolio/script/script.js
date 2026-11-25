@@ -7,6 +7,9 @@ const btnBook = document.querySelectorAll(".price-card-btn");
 const modal = document.querySelector(".modal");
 const btnCloseModal = document.querySelector(".btn-close-modal");
 const btnBookModal = document.querySelector(".btn-modal-book");
+const btnScrollDown = document.querySelector(
+  ".hero-right-block-first_btn-scroll",
+);
 
 const slider = document.querySelector(".slider");
 
@@ -156,4 +159,10 @@ window.addEventListener("click", (event) => {
   if (event.target === modal && isModalOpen()) {
     modalClose();
   }
+});
+
+// Scroll down
+
+btnScrollDown.addEventListener("click", () => {
+  document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
 });
